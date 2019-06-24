@@ -20,7 +20,7 @@
 {% endif %}
 {% endwith %}
 
-{% if not items %}
+{% if isEmpty %}
 <p> You currently have no menu items. </p>
 {% endif %}
 
@@ -36,6 +36,8 @@ Create New Item</a></br></br>
 {{i.description}}</br>
 
 {{i.price}} </br>
+
+{{i.course}} </br>
 
 <a href='{{url_for('editMenuItem', restaurant_id = restaurant.id, menu_id = i.id) }}'>Edit</a></br>
 
