@@ -31,7 +31,7 @@ def newRestaurant():
         newRestaurant = Restaurant(name=request.form['name'])
         session.add(newRestaurant)
         session.commit()
-        flash('new restaurant item created!')
+        flash('new restaurant created!')
         return redirect(url_for('showRestaurants'))
     elif request.method == 'GET':
         return render_template('newrestaurant.html')
